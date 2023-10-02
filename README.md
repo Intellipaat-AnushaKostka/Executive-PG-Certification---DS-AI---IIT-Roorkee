@@ -1,1 +1,1 @@
-# Excecutive-PG-Certification---DS-AI---IIT-Roorkee
+# Executive-PG-Certification---DS-AI---IIT-Roorkee
