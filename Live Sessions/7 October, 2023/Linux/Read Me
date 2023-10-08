@@ -67,5 +67,5 @@ cp command is used to copy the file example cp file1.txt file1copy
 syntax : mv source destication example mv dir1 dir2 
 
 mv command is also used for renaming 
-example : mv file1.txt newfile.txt (applicabel for both file and directory)
+example : mv file1.txt newfile.txt (applicable for both file and directory)
 
