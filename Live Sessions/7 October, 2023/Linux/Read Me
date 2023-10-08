@@ -57,7 +57,7 @@ example : cat file1 > file2 ( this will replace the content of file 2 and copy a
 to delete file : rm filename and rm -r filename (recursive)
 to delete empty directory : rmdir dirname 
 
-to delte non empty directory : rm -rf dirname 
+to delete non empty directory : rm -rf dirname 
 
 cp command is used to copy the file example cp file1.txt file1copy 
  to copy file from one directory to another directory we have to give the full path : cp file1 dirname/file1copy.txt 
