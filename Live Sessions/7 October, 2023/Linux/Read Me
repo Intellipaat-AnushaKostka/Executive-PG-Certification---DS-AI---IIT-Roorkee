@@ -13,25 +13,26 @@ clear:Clears the terminal.
 mkdir foldername: To create a folder.
 ls : To get the list of folders as well files.
 mkdir foldername1 foldername2 foldername3 : To create multiple folders
-  azuar 
+  azure 
 mkdir -p newfolder/a/old : To create a file in a folder basiclly a subdirectory of a folder (-p stands for parent, this option is suggesting the command to create the parent directory first)
 ls newfolder :To get into the folder, then ls newfolder/a : to get in to the (a) folder, ls/newfolder/a/old : To get into the old folder
- ls -l : To get the files and folder in a detailed manner (when it's created and etc....)
- pwd : To get to know your present working directory 
+ls -l : To get the files and folder in a detailed manner (when it's created and etc....)
+pwd : To get to know your present working directory 
 ls -a : to get to know the hidden folders in the directory
- ls -al : It will show al, the folders the public and the private
- ls -R : It will show all the files in a  tree structure.(-R : It stands for recursive)
- ls -r : It will show the data in a reverse manner(-r : It satnds for reverse)
- cd : It stands for changing the directory
- cd .. : To come out from a directory or a folder
- ll : To get the long listing(somehow same as ls -al)
- touch filename : To create an empty file
- nano filename:  To open and edit the file in the nano text editor.
-   ctrl + s : Save the file.
+ls -al : It will show al, the folders the public and the private
+ls -R : It will show all the files in a  tree structure.(-R : It stands for recursive)
+ls -r : It will show the data in a reverse manner(-r : It satnds for reverse)
+cd : It stands for changing the directory
+cd .. : To come out from a directory or a folder
+ll : To get the long listing(somehow same as ls -al)
+touch filename : To create an empty file
+nano filename:  To open and edit the file in the nano text editor.
+    ctrl + s : Save the file.
     ctrl + x: to exit the file.
  nano newfile.txt
- vi filename.txt : To create a file using vi text editor.
- cat filename : to read any file.
+    vi filename.txt : To create a file using vi text editor.
+    cat filename : to read any file.
+
 Vi text editor has two modes:
 
  a) Command mode : In this mode you can execute commands to save the file or exit the text editor.
