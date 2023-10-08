@@ -22,7 +22,7 @@ ls newfolder :To get into the folder, then ls newfolder/a : to get in to the (a)
 ls -a : to get to know the hidden folders in the directory
 ls -al : It will show al, the folders the public and the private
 ls -R : It will show all the files in a  tree structure.(-R : It stands for recursive)
-ls -r : It will show the data in a reverse manner(-r : It satnds for reverse)
+ls -r : It will show the data in a reverse manner(-r : It stands for reverse)
 cd : It stands for changing the directory
 cd .. : To come out from a directory or a folder
 ll : To get the long listing(somehow same as ls -al)
