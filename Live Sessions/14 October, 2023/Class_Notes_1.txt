@@ -1,0 +1,133 @@
+
+Data -- > WHatever ywe emter our system that is know as Data. It is a collection of raw facts. 
+Information  -> Processed data is called information. 
+Database  -> Collection of Informarion stored at a particular place is called Database
+
+
+DATABSE MODULES 
+
+1) FMS (File Management System)
+Early 1950's
+Data stored in Sequential Manner or continous stream of charecters
+Drawback - If User needs to find any value then he needs to start searching from begining of file 
+Eg: COBOL
+
+
+2) HMS (Hierarchial Management System)
+Developed by IBM in 1968 when they were developing the project called IMS. This Module was dveloped on an operating system called MSDOS
+Advantage - Data was arraged in the hierarchial format. Hence use can find out any value easily without wasting much time
+Disadvantage - If you want to add one level in between then user has to reconstruct the entire level again and only one use can use the database at a time.
+
+3) NDBMS (Network Database Managemt System)
+Developed by IBM in 1969 while devloping the operating system called MULTICS
+Advantage : More than one use can share the database at a time
+Drawbacks :
+ 1) No Security
+2) Increases too much redundacy -- (duplicating)
+3) Occupies lot of memory and decrease the system performance
+
+
+4) RDBMS (Relational Database Managemt System)
+This Module was developed by german scientist EF could in 1970.
+Data is stored in the form of tables. 
+
+Here we can define the relations between the tables.
+   1) 1:1 - In this relation , one object/record has the relationship with only one object/record.
+      Student -- Student ID
+      Customer --  Account Number 
+      Customer -- Aadhar/ PAN/ Passport ID
+
+   2) 1:m / m:1 - One Object has relationship with Many other Objects.
+        Trainer - Courses
+        Student - teacher
+         Department - Employees
+         State - Districts
+
+   3) m:m  - Many object has relationship with many other objects
+       Employee - Salary
+       Name - Department 
+      Vendors - Objects(Pen , books , register , xyz)
+      Students and Subjects
+
+
+Properties of Database
+
+1) Data should be stored in form of tables. Table can be defined as collection of rows and columns. 
+Horizontal lines are called Rows/ tuples and Records
+Vertical lines are called as column/ field and attribute.
+
+2)  Intersection of rows and columns is called as cell. 
+3) Other name of the table is Object/ Entity.
+4) Table should not contain duplicate columns.
+5) Database should not contain duplicate objects / table Name.
+
+
+RDBMS Vs DBMS
+
+DBMS (Database Management System)
+1)DBMS stored Data as Files
+2) Does not apply any security with regards to data Manipulation
+3) Since its a file system , Hence there is no relation between data
+4) Eg: XML (Extensible markup language) / files
+
+RDBMS (Relational Database Management System) 
+1) RDBMS stored Data as Tables
+2) Secured
+3) Relationship between the tables 
+4) Eg : MySQL  /Postgres / Microsoft- SQL Server / Oracle - Oracle / IBM DB2
+
+
+SQL (NOT DATABASE) 
+
+It is just a language --> Structured Querry Language , It is the processed language which is used to communicate with all the types of databases such as oracle , SQl server , MYSQL.
+1972 , this language came into the market.
+
+Featrures of SQL:
+1) It is not the case sensitive language. 
+2) Semicolon after end of each SQL command.
+3) SQL ==  sequel
+4) Similar to english language
+
+
+
+
+
+
+
+
+
+
+
+
+		   ETL                                                       Data Warehouse(Historical)            								ML Engineer				             AI Engineer		
+Flat files
+Databases
+Log Files
+PDF
+
+
+
+
+
+                                       DATA ENGINEER						DATA ANALYST / BUSINES ANALYST			What will happened using certain Algorithm?                              Computer Vision / NLP / Deep Learning / Robotics
+									(Technical ) / (Technical + Domain expertise)
+									BI --> Business Intelligence
+									(Whatever Happened in the past ? )
+  / 
+
+
+SQL (mOST IMPORTAMT)						        SQL, PYTHON/R, pOWER bi , TABLEU , sTATISTICS                                             SQL, PYTHON/R , sTATISTICS, + ml , TABleau and power BI		 SQL, PYTHON/R, Computer Vision / NLP / Deep Learnin
+HADOOP -- 
+NOSQL
+PYSPARK
+SPARK
+AZURE/AWS
+
+
+
+															DATA SCIENTIST --- ALL ROUNDER
+
+
+
+
+
