@@ -1,0 +1,371 @@
+
+/* 
+
+CONSTRAINTS in SQL - 
+
+Constraints are used to restrict the unwated data in any columns.
+There are total 6 types of constraints :- 
+1) Not Null Constraint - Column connaot store NULL Value
+2) Default Constraint - Provide default value when none is specified
+3) Unique Constraint - Ensures that all the values in the column are different
+4) Primary Key Constraint - Combination of Not NULL and Unique
+5) Foriegn Key Constraint - Ensure the refrential intregrity of the datanin one table to match the values in another table
+6) Check Constraint - Ensures that all values in a column satisfy certain consitions 
+
+*/
+
+
+CREATE DATABASE test_Constraint;
+USE test_Constraint
+
+
+-- NOT NULL
+
+CREATE TABLE customers (
+
+id int not null,
+name varchar(10) not null,
+age int not null , 
+address varchar(25),
+gender char(5) 
+
+)
+
+SELECT * FROM customers
+
+
+INSERT INTO customers values (1,'Akshay',28,'Hyderabad','Male')
+INSERT INTO customers (id, name) Values (1,'Avinash')
+INSERT INTO customers (id, name, age) Values (1,'Avinash',30)
+
+
+
+-- DEFAULT CONSTRAINT
+
+CREATE TABLE Sales (
+
+id int not null,
+name varchar(10) not null,
+age int default '25' , 
+address varchar(25),
+gender char(5)
+
+)
+
+INSERT INTO Sales(id,name,address,gender) values (1,'Dhruv','Delhi','Male')
+SELECT * FROM Sales
+
+
+-- UNIQUE CONSTRAINT
+
+
+CREATE TABLE Marketing (
+
+id int unique,
+name varchar(10) not null,
+age int default '25' , 
+address varchar(25),
+gender char(10)
+
+)
+
+
+INSERT INTO Marketing Values (1,'Akshay',28,'Hyderabad','Male'),
+(1,'Rajat',29,'Delhi','Male')
+
+INSERT INTO Marketing Values (1,'Akshay',28,'Hyderabad','Male'),
+(NULL,'Rajat',29,'Delhi','Male')
+
+INSERT INTO Marketing Values (1,'Akshay',28,'Hyderabad','Male'),
+(2,'Rajat',29,'Delhi','Male')
+
+INSERT INTO Marketing Values (NULL,'Kavya',20,'Hyderabad','Female')
+
+SELECT * FROM Marketing
+
+
+-- PRIMARY KEY
+-- What is diffrennce between unique and Primary Key ?
+
+CREATE TABLE Purchase_Order (
+
+id int Primary Key,
+name varchar(10) not null,
+age int default '25' , 
+address varchar(25),
+gender char(10)
+
+)
+
+
+INSERT INTO Purchase_Order Values (1,'Akshay',28,'Hyderabad','Male'),
+(1,'Rajat',29,'Delhi','Male')
+
+
+INSERT INTO Purchase_Order Values (1,'Akshay',28,'Hyderabad','Male'),
+(NULL,'Rajat',29,'Delhi','Male')
+
+INSERT INTO Purchase_Order Values (1,'Akshay',28,'Hyderabad','Male'),
+(2,'Rajat',29,'Delhi','Male')
+
+SELECT * from Purchase_Order
+
+
+
+-- Check Constraint
+
+
+CREATE TABLE SupplyChain (
+
+id int Primary Key,
+name varchar(10) not null,
+age int check (age >=18), 
+address varchar(25),
+gender char(10)
+
+)
+
+
+INSERT INTO SupplyChain Values (1,'Akshay',28,'Hyderabad','Male'),
+(NULL,'Rajat',17,'Delhi','Male')
+
+INSERT INTO SupplyChain Values (1,'Akshay',28,'Hyderabad','Male'),
+(2,'Rajat',17,'Delhi','Male')
+
+INSERT INTO SupplyChain Values (1,'Akshay',28,'Hyderabad','Male'),
+(2,'Rajat',29,'Delhi','Male')
+
+
+
+/*
+
+-- Foreign Key Constraint
+
+1) It is used to establish relationship between 2 tables
+2) Refrenced key in parent table must be either primary key or unique key
+3) We cannot insert the record in the foreign key column untill and unless record is available in primary key
+4) we cannot delete record from primary key column until and unless record is deleted from foreign key column
+5) Foreign key involves two tables . First one is parent table or referenced table and second one is child table or foreign table.
+
+*/
+
+
+-- PARENT TABLE
+
+CREATE TABLE Author (
+author_id int primary key,
+author_name varchar(30)
+)
+
+-- Child Table
+
+CREATE TABLE Books(
+Book_id int,
+book_title varchar(30),
+book_price int,
+book_author_id int references Author(author_id)
+
+)
+
+SELECT * FROM Author
+SELECT * from Books
+
+INSERT INTO Books Values (1,'Harry Potter', 500 , 101)
+
+INSERT INTO Author Values (100,'Avinash')
+
+
+
+DELETE FROM Author where author_id = 100
+DELETE FROM Books where book_author_id = 100
+DELETE FROM Author where author_id = 100
+
+
+
+/* 
+
+FUNCTIONS IN SQL :- 
+
+1) SINGLE ROW FUNCTION - process on single row at a time
+2) MULTI ROW FUNCTION - process on multiple rows at a time
+3) WINDOWS FUNCTIONS
+
+
+*/
+
+
+USE Student_Database
+Select * FROM Student_Details
+INSERT INTO Student_Details Values (8,'Gaurav', 'SQL', -100)
+
+/* SINGLE ROW FUNCTIONS */
+
+/* 1) mathematical functions */
+
+-- ABS(Absolute)
+Select * , ABS(Marks) as 'Absolute' from Student_Details
+
+-- SQRT
+Select * , SQRT(Abs(Marks)) from Student_Details
+
+-- POWER
+Select * , POWER(Marks,2) from Student_Details
+SELECT POWER(100,2) 
+
+-- ROUND
+SELECT ROUND(996.254565656,2)
+
+-- CEILING
+SELECT * FROM Student_Details
+SELECT *,CEILING(Marks) FROM Student_Details
+SELECT CEILING(100.4)
+
+-- FLOOR
+SELECT FLOOR(100.4)
+
+-- SIGN
+Select * , SIGN(Marks) from Student_Details
+SELECT SIGN (-2)
+
+-- PI()
+SELECT pi()
+
+-- sin(number)
+SELECT SIN(90)
+select tan(90)
+select cos(90)
+
+
+/* 2) SRING FUNCTIONS */
+
+-- LENGTH FUNCTION
+SELECT LEN('Akshay')
+SELECT *, len(stname) from student_details
+
+--  RIGHT FUNCTION
+SELECT RIGHT('Akshay',5)
+select *,right(stname,2) from Student_Details
+SELECT * , RIGHT(stname,2) FROM Student_Details
+
+--  LEFT FUNCTION
+select *,left(stname,3) from Student_Details
+
+
+-- upper function
+select UPPER('akshay')
+
+-- LTRIM() FUNCTION
+SELECT LTRIM('       AKSHAY')
+
+-- RTRIM() FUNCTION
+SELECT RTRIM('       AKSHAY         ')
+SELECT ltrim(RTRIM('       AKSHAY         '))
+
+-- CHARINDEX()
+SELECT CHARINDEX('Y','Akshay')
+
+-- REPLACE()
+SELECT REPLACE('JACK','J','BL')
+
+-- REVERSE
+SELECT REVERSE('SAI')
+
+-- REPLICATE()
+SELECT REPLICATE('OM',108)
+SELECT REPLICATE('AKSHAY',2)
+
+-- SUBSTRING ()
+SELECT SUBSTRING('OM NAMAH SHIVAY',4,5)
+
+-- CONCAT()
+SELECT CONCAT('Akshay', ' ','Gupta')
+
+
+/* 3) DATE FUNCTIONS */
+
+-- GETDATE()
+SELECT GETDATE()
+
+-- MONTH()
+SELECT MONTH(GETDATE())
+
+-- DAY()
+SELECT DAY(GETDATE())
+
+-- YEAR ()
+SELECT YEAR(GETDATE())
+SELECT DAY('2022-01-01'),MONTH(GETDATE()), YEAR(GETDATE())
+
+-- DATEADD()
+SELECT DATEADD(dd,15,GETDATE())
+SELECT DATEADD(MM,2,GETDATE())
+SELECT DATEADD(YY,1,GETDATE())
+
+-- DATEDIFF()
+SELECT DATEDIFF(dd,'2022-06-15','2022-07-01')
+SELECT DATEDIFF(YY,'2022-01-01','2024-01-01')
+
+
+/* MULTI ROW FUNCTIONS */
+
+-- SUM()
+SELECT * FROM Student_Details
+SELECT SUM(Marks) from student_Details
+
+
+-- AVG()
+SELECT * FROM Student_Details
+SELECT sum(Marks), AVG(Marks) from student_Details
+
+-- MAX()
+SELECT * FROM Student_Details
+SELECT sum(Marks), AVG(Marks),MAX(Marks) from student_Details
+
+
+-- MIN()
+SELECT * FROM Student_Details
+SELECT sum(Marks), AVG(Marks),MAX(Marks), MIN(mARKS) from student_Details
+
+-- COUNT()
+SELECT * FROM Student_Details
+select count(marks) from student_Details
+SELECT sum(Marks), AVG(Marks),MAX(Marks), MIN(mARKS),count(Marks) from student_Details
+
+-- STDEV()
+SELECT * FROM Student_Details
+select stdev(marks) from student_Details
+
+
+/* WINDOWS FUNCTIONS */
+
+-- OVER()
+
+SELECT  *, SUM(Marks) OVER() FROM Student_Details 
+SELECT  *, AVG(Marks) OVER() FROM Student_Details 
+
+
+-- PARTITION BY() - used to create subset
+SELECT *, SUM(Marks) over(PARTITION BY subject) FROM Student_Details
+
+
+-- RANK() - returns a unique rank number for each distinct row 
+SELECT * FROM Student_Details
+SELECT * , RANK() OVER(PARTITION BY subject order by Marks) FROM Student_Details
+
+
+-- DENSE RANK() - it will not skip
+SELECT * , DENSE_RANK() OVER(PARTITION BY subject order by Marks) FROM Student_Details
+
+
+-- LAG()
+SELECT * , LAG(Marks) OVER(order by Marks) FROM Student_Details
+SELECT * , LAG(Marks) OVER(partition by subject order by Marks) FROM Student_Details
+
+
+-- LEAD()
+SELECT * , LEAD(Marks) OVER(order by Marks) FROM Student_Details
+SELECT * , LEAD(Marks) OVER(partition by subject order by Marks) FROM Student_Details
+
+
+
+
