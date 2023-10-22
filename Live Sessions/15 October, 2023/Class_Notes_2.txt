@@ -1,0 +1,139 @@
+/*
+
+SQL DATA TYPES
+
+Data Type						Syntax			               Explanation
+
+1) Integer						INTEGER						   Specify Int Value
+
+2) Character					Char/Varchar				   255 Characters
+
+3) Text							Text						   65,535 Characters
+
+4) Decimal                      Decimal(P,S)				    P is Precision Value and s is scale
+
+5) Date							DATE							Stores Year / Month and date Values
+
+*/
+
+
+
+/* CREATING the Database */
+CREATE database Employee
+USE Employee
+
+/* Checking Information of Database */ 
+sp_helpdb Employee
+
+/* Renaming the Database */
+sp_renamedb Employee , Employee_Details
+sp_helpdb Employee_Details
+
+/* Dropping Database */
+DROP database Employee_Details
+
+
+/*
+
+SQL Commands 
+
+1) DDL
+   a) Create
+   b) Alter
+             1) Alter
+             2) Add
+             3) Rename
+             4) Drop
+   c) Rename
+   d) Drop
+   e) Truncate
+
+2) DML
+   a) Insert
+   b) Update
+   c) Delete
+
+3) DRL
+   a) Select
+   
+4) TCL
+    a) Commit
+    b) Rollback
+    c) Savepoint
+  
+5) DCL
+   a) Grant
+   b) Revoke
+
+   */
+
+/* DDL COMMANDS */
+
+/* 1 ) CREATE TABLE - Used to Create the tables*/ 
+
+
+CREATE TABLE Employee (
+
+		EmployeeID int,  
+		FirstName varchar(255),  
+		LastName varchar(255),  
+		City varchar(255),
+		Department varchar(255),
+		DateofJoining Date,
+		Salary decimal(8,2)
+)
+
+EXEC sp_help Employee
+
+SELECT * FROM Employee
+
+INSERT into Employee Values ('1','Akshay','Gupta','Hyderabad','Data Science','01-01-2015' ,'10000.27')
+
+/* 2) Alter - Used to do Modifications for database Objects like Tables */
+
+        /* 2.a) Alter Alter */
+		ALTER TABLE Employee alter column Salary int 
+		ALTER TABLE Employee alter column Department varchar(244) 
+
+		/* 2.b) Alter Add */
+		ALTER TABLE Employee add Gender text 
+		
+		/* 2.c) Alter Rename */
+	    sp_rename 'Employee.Gender', 'Gen'
+		
+		/* 2.d) Alter Drop */
+	    ALTER TABLE Employee drop column Gen
+
+
+/* 3) Rename - Used to rename the table name */
+
+sp_rename Employee , Employee_table
+
+
+/* 4) Drop - Used to drop table */
+
+DROP table Employee
+
+/* 5) Truncate - Used to remove data from the table */
+
+TRUNCATE table Employee
+
+
+
+/* DML COMMANDS */
+
+/* 1) INSERT - Used to insert data in the table */
+
+INSERT into Employee Values ('1','Akshay','Gupta','Hyderabad','Analytics','01-02-2015' ,'999.27'),
+('2','Manish','Srivastava','Delhi','DBA','01-02-2015' ,'10999.27'),
+('3','Pankaj','Jain','Kolkata','Analytics','01-02-2015' ,'999.27')
+
+
+INSERT into Employee(FirstName, City,DateofJoining) values ('Abhishek','Mumbai','2012-13-03')
+
+SELECT * FROM Employee
+
+
+/* 1) UPDATE - Used to update data in the table */
+
+UPDATE Employee set Salary = 5000 where FirstName = 'Akshay'
