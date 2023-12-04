@@ -1,0 +1,48 @@
+
+DATA TYPES AND CONSTRAINTS – QUIZ
+Give a syntax for Check constraint.
+
+Marked Answer :
+Both are correct
+
+Correct Answer :
+Both are correct
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Constraints can be applied on
+
+Marked Answer :
+All of the above
+
+Correct Answer :
+All of the above
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+What does a Foreign Key Constraint establish in SQL Server?
+
+Marked Answer :
+A relationship between two tables
+
+Correct Answer :
+A relationship between two tables
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+What is the primary difference between a Primary Key Constraint and a Unique Constraint in SQL Server?
+
+Marked Answer :
+A Primary Key Constraint creates a unique index, while a Unique Constraint does not.
+
+Correct Answer :
+A Primary Key Constraint creates a unique index, while a Unique Constraint does not.
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which constraint type is used to enforce referential integrity between tables in SQL Server?
+
+Marked Answer :
+Foreign Key Constraint
+
+Correct Answer :
+Foreign Key Constraint
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Total Marks 5 / 5
