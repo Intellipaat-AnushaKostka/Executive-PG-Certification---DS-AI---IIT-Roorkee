@@ -1,0 +1,48 @@
+
+VIEWS AND STORED PROCEDURES – QUIZ
+
+You can delete a view with ___________ command.
+
+Marked Answer :
+DROP VIEW
+
+Correct Answer :
+DROP VIEW
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+What is a view?
+
+Marked Answer :
+A view is a virtual table which results of executing a pre-compiled query
+
+Correct Answer :
+A view is a virtual table which results of executing a pre-compiled query
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+A stored procedure in SQL is a___________.
+
+Marked Answer :
+create procedure procedure_name as SQL Statements
+
+Correct Answer :
+create procedure procedure_name as SQL Statements
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+CREATE PROCEDURE statements cannot be combined with other SQL statements in a single batch.True or False?
+
+Marked Answer :
+FALSE
+Correct Answer :
+TRUE
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+Syntax to create stored procedure is/are
+
+Marked Answer :
+CREATE PROCEDURE procedureName AS SQL statements
+
+Correct Answer :
+CREATE PROCEDURE procedureName AS SQL statements
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Total Marks 4 / 5
