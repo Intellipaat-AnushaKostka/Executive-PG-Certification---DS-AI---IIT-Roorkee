@@ -1,0 +1,49 @@
+
+CLAUSES – QUIZ
+
+Which SQL clause allows you to alias columns in the result set?
+
+Marked Answer :
+SELECT
+
+Correct Answer :
+SELECT
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which of the following is a valid example of using the HAVING clause?
+
+Marked Answer :
+SELECT * FROM employees GROUP BY department HAVING AVG(salary) > 50000;
+
+Correct Answer :
+SELECT DEPARTMENT FROM EMPLOYEES HAVING COUNT() > 5;
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+What is the purpose of the HAVING clause in SQL?
+
+Marked Answer :
+To filter grouped rows based on a condition.
+
+Correct Answer :
+TO FILTER GROUPED ROWS BASED ON A CONDITION.
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which of the following SQL clauses is typically used for filtering rows before grouping?
+
+Marked Answer :
+GROUP BY
+
+Correct Answer :
+WHERE
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+Which SQL aggregate function is commonly used with the GROUP BY clause to calculate the average of a numeric column?
+
+Marked Answer :
+AVG()
+
+Correct Answer :
+AVG()
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Total Marks 3 / 5
