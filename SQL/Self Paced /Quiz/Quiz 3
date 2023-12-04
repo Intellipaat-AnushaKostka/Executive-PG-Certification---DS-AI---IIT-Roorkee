@@ -1,0 +1,47 @@
+OPERATORS – QUIZ
+
+Which SQL operator is commonly used with wildcards for pattern matching?
+
+Marked Answer :
+LIKE
+
+Correct Answer :
+LIKE
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+What does the ‘%’ wildcard symbol represent in SQL?
+
+Marked Answer :
+It matches zero or more characters.
+
+Correct Answer :
+IT MATCHES ZERO OR MORE CHARACTERS.
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+When using the ‘%’ wildcard in a SQL query, which of the following patterns would match ‘apple’ and ‘apples’?
+Marked Answer :
+‘appl%’
+
+Correct Answer :
+‘APPL%’
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+In SQL, what does the ‘_’ wildcard match when used in a pattern?
+
+Marked Answer :
+Exactly one character.
+
+Correct Answer :
+EXACTLY ONE CHARACTER.
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+In SQL, which operator can you use to combine wildcards for complex pattern matching?
+
+Marked Answer :
+NOT
+
+Correct Answer :
+AND
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+Total Marks 4 / 5
