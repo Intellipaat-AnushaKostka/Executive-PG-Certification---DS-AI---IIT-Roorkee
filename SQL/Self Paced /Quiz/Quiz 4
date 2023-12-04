@@ -1,0 +1,47 @@
+
+Which SQL join type is used to combine rows from two or more tables, regardless of whether there is a match between them?
+
+Marked Answer :
+INNER JOIN
+
+Correct Answer :
+CROSS JOIN
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+What does a Scalar User-Defined Function in SQL typically return?
+
+Marked Answer :
+A single value
+
+Correct Answer :
+A SINGLE VALUE
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which SQL clause is used to call a user-defined function within a query?
+
+Marked Answer :
+SELECT
+
+Correct Answer :
+SELECT
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+When defining a UDF, which SQL keyword is used to specify the data type of the returned value?
+
+Marked Answer :
+RETURNS
+
+Correct Answer :
+RETURNS
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which join type returns only the rows that do not have a match in either the left or right table?
+
+Marked Answer :
+FULL OUTER JOIN
+
+Correct Answer :
+FULL OUTER JOIN
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Total Marks 4 / 5
