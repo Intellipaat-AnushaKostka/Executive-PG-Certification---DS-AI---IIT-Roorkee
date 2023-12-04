@@ -1,0 +1,49 @@
+
+EXCEPTION HANDLING – QUIZ
+
+In SQL Server, which keyword is used to begin an exception handling block?
+
+Marked Answer :
+TRY
+
+Correct Answer :
+TRY
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which of the following is NOT a valid SQL Server system function used in error handling?
+
+Marked Answer :
+ERROR_STATE()
+
+Correct Answer :
+ERROR_CONDITION()
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+Which one is not an aggregate function.
+
+Marked Answer :
+ABS
+
+Correct Answer :
+ABS
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Triggers ________ enabled or disabled
+
+Marked Answer :
+Can be
+
+Correct Answer :
+Can be
+
+TOTAL MARKS : 1 MARKS OBTAINED  1
+Which will execute fast?
+
+Marked Answer :
+Both
+
+Correct Answer :
+Joins
+
+TOTAL MARKS : 1 MARKS OBTAINED  0
+Total Marks 3 / 5
